@@ -27,7 +27,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/Em3ka/blog-preview-card)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [language-preview-card](https://language-preview-card.netlify.app/)
 
 ## My process
 
