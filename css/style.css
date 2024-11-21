@@ -1,0 +1,117 @@
+:root {
+  --yellow-600: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --gray-500: hsl(0, 0%, 42%);
+  --gray-950: hsl(0, 0%, 7%);
+
+  --fs-1: clamp(1.25rem, 1.1619718309859155rem + 0.3755868544600939vw, 1.5rem);
+  --fs-2: clamp(0.875rem, 0.8309859154929577rem + 0.18779342723004694vw, 1rem);
+  --fs-3: clamp(
+    0.75rem,
+    0.7059859154929577rem + 0.18779342723004694vw,
+    0.875rem
+  );
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+  font-size: var(--fs-3);
+  font-weight: 500;
+  background-color: var(--yellow-600);
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a:not([class]) {
+  display: inline-block;
+  text-decoration: none;
+  color: currentColor;
+}
+
+a:not([class]):hover {
+  color: var(--yellow-600);
+}
+
+.content-flow > * + * {
+  margin-block-start: var(--content-spacing, 1.5rem);
+}
+
+.layout-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  max-width: 24rem;
+  padding: 1.5rem;
+  background-color: var(--white);
+  border: 1px solid black;
+  border-radius: 1.25rem;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 1);
+}
+
+.card__blog-image {
+  width: 100%;
+  border-radius: 0.625rem;
+}
+
+.card-content {
+  --content-spacing: 0.75rem;
+  margin-block-start: 1.5rem;
+}
+
+.card-content__category {
+  display: inline-block;
+  background-color: var(--yellow-600);
+  font-weight: 800;
+  padding-block: 0.25rem;
+  padding-inline: 0.75rem;
+  border-radius: 0.25rem;
+}
+
+.card-content__title {
+  font-size: var(--fs-1);
+  font-weight: 800;
+}
+
+.card-content__description {
+  color: var(--gray-500);
+  font-size: var(--fs-2);
+}
+
+.card-profile {
+  display: flex;
+  align-items: center;
+}
+
+.card-profile__author-img {
+  width: 2rem;
+  margin-inline-end: 0.75rem;
+}
+
+.card-profile__author-name {
+  font-weight: 800;
+}
+
+@media (max-width: 48rem) {
+  .layout-wrapper {
+    margin-inline: 1.5rem;
+  }
+}
